@@ -15,10 +15,11 @@
 			</center>
 			<ul>
 			<li><h4>The game has 2 players, playing in turn</h4></li>
-			<li><h4>In each turn, a player can either rolls a dice as many times as he/she wishes or pass the turn to next player. After rolled dice, each getting rolled result get added to his Total score</h4></li>
-			<li><h4>But, if the player rolls a 1, The player his total score gets lost. After that, it's the next player's turn</h4></li>
+			<li><h4>In each turn, a player either rolls a dice as many times as he/she whishes or pass the turn to next player. Each result get added to his/her current score</h4></li>
+			<li><h4>Player saves the current score into it's final score in each turn with press of hold score</h4></li>
+			<li><h4>But, if the player rolls a 1, The player his/her current score gets lost. After that, it's the next player's turn</h4></li>
 			<li><h4>The next player also can choose to either rolls a dice as many times as he/she wishes or pass the turn to next player.</h4></li>
-			<li><h4>The first player to reach 100 points on Total score wins the game</h4></li>
+			<li><h4>The first player to reach 100 points on final score wins the game</h4></li>
 			</ul>
 			<center><button onClick="PopUp()">Play</button></center>
 	 	</div>
@@ -33,10 +34,11 @@
 			
 		</center><br>
 		<center>
-			<label>Total Score&nbsp;&nbsp;<input id="ptext1" type="text" name="score" value="0" readonly></label><br><br>
+			<label>Final Score&nbsp;&nbsp;<input id="finaltext1" type="text" name="fscore" value="0" readonly></label><br><br>
+			<label>Current Score&nbsp;&nbsp;<input id="ptext1" type="text" name="score" value="0" readonly></label><br><br>
+			<button value="Hold" onclick="holdScore1();">Hold Score</button>
 			<button value="roll" onclick="randomScore1();">Roll Dice</button>
-			<button value="pass" onclick="passTurn1()";>Pass Turn</button>
-			<button onclick="window.location.href='index.html'">New Game</button><br><br>
+			<button value="pass" onclick="passTurn1()";>Pass Turn</button><br><br>
 			<img id="playerImg1" src="def.gif" alt="dice" style="display: none">
 		</center>
 	</div>
@@ -49,10 +51,11 @@
 			
 		</center><br>
 		<center>
-			<label>Total Score&nbsp;&nbsp;<input id="ptext2" type="text" name="score" value="0" readonly></label><br><br>
+			<label>Final Score&nbsp;&nbsp;<input id="finaltext2" type="text" name="fscore" value="0" readonly></label><br><br>
+			<label>Current Score&nbsp;&nbsp;<input id="ptext2" type="text" name="score" value="0" readonly></label><br><br>
+			<button value="Hold" onclick="holdScore2();">Hold Score</button>
 			<button value="roll" onclick="randomScore2();">Roll Dice</button>
-			<button value="pass" onclick="passTurn2()";>Pass Turn</button>
-			<button onclick="window.location.href='index.html'">New Game</button><br><br>
+			<button value="pass" onclick="passTurn2()";>Pass Turn</button><br><br>
 			<img id="playerImg2" src="def2.gif" alt="dice" style="display: none">
 		</center>
 	</div>

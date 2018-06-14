@@ -21,19 +21,19 @@ top: 50px; left: 300px; right: -100px;
 }
 #popup{
 	border: 5px solid #000;
-	width: 800px;
-  height: 400px;
-  left: auto;
+	width: 700px;
+  height: 450px;
+  /*left: auto;*/
 }
 #player1{
 	border: 5px solid blue;
 	width: 700px;
-	height: 450px;
+	height: 480px;
 }
 #player2{
 	border: 5px solid yellow;
 	width: 700px;
-	height: 450px;
+	height: 480px;
 }
 
 button {

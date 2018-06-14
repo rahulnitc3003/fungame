@@ -1,8 +1,10 @@
-function PopUp(){
+	function PopUp(){
         document.getElementById('ac-wrapper').style.display="none"; 
-}
-		pTotal1 = 0;
-		pTotal2 = 0;
+	}
+	pTotal1 = 0;
+	pTotal2 = 0;
+	ftotal1 = 0;
+	ftotal2 = 0;
 	function passTurn1() {
 		var pass1 = document.getElementById('player1');
 		pass1.style.display = "none";
@@ -28,13 +30,13 @@ function PopUp(){
 		if (score1 == 1) {
 			document.getElementById("playerImg1").src="dice1.jpg";
 			alert("You Got Number 1");
-			alert("Sorry!!! You Lossed Whole Score");
+			alert("Sorry!!! You Lossed Current Score");
 			pTotal1 = 0;
 			passTurn1()
 		}
 		else{
 			pTotal1 += score1;
-			if(pTotal1 >= 100){
+			if(ftotal1 >= 100){
 				alert("Congrats!!! Player1 Winner");
 				// pTotal1 = 0;
 				// pTotal2 = 0;
@@ -57,13 +59,13 @@ function PopUp(){
 		var score2 = Math.floor(Math.random() * (upper - lower) + lower);
 		if (score2 == 1) {
 			alert("You Got Number 1");
-			alert("Sorry!!! You Lossed Whole Score");
+			alert("Sorry!!! You Lossed Current Score");
 			pTotal2 = 0;
 			passTurn2();
 		}
 		else{
 			pTotal2 += score2;
-			if(pTotal2 >= 100){
+			if(ftotal2 >= 100){
 				alert("Congrats!!! Player2 Winner");
 				// pTotal1 = 0;
 				// pTotal2 = 0;
@@ -78,4 +80,31 @@ function PopUp(){
 		}
 		document.getElementById("ptext2").value = pTotal2;
 		//return score2;
+	}
+
+	function holdScore1(){
+		var current = document.getElementById("ptext1").value;
+		ftotal1 += parseInt(current);
+		document.getElementById("finaltext1").value = ftotal1;
+		if(ftotal1 >= 100){
+			alert("Congrats!!! Player1 Winner");
+			window.location='index.html';
+		}
+		else{
+			document.getElementById("ptext1").value = 0;
+			pTotal1 = 0;	
+		}
+	}
+	function holdScore2(){
+		var current = document.getElementById("ptext2").value;
+		ftotal2 += parseInt(current);
+		document.getElementById("finaltext2").value = ftotal2;
+		if(ftotal2 >= 100){
+			alert("Congrats!!! Player2 Winner");
+			window.location='index.html';
+		}
+		else{
+			document.getElementById("ptext2").value = 0;
+			pTotal2 = 0;	
+		}
 	}
